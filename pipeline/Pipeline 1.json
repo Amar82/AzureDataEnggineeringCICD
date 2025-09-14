@@ -1,0 +1,41 @@
+{
+	"name": "Pipeline 1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Notebook1",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/dentalapollo31@gmail.com/mynotebook",
+					"baseParameters": {
+						"input": {
+							"value": "@pipeline().parameters.name",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1_linkedservice",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-09-14T13:47:01Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}
