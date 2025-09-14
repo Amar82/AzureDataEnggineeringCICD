@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "amarsynpasews001"
+		},
+		"AzureDatabricks1_linkedservice_accessToken": {
+			"value": ""
+		},
+		"amarsynpasews001-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:amarsynpasews001.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"amarsynpasews001-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://azsynpasedlgen2.dfs.core.windows.net"
+		}
+	}
+}
